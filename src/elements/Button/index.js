@@ -53,7 +53,7 @@ export default function Button(props) {
           className={className.join(" ")}
           style={props.style}
         >
-          {props.childen}
+          {props.children}
         </Link>
       );
     }

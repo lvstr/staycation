@@ -46,10 +46,10 @@ export default function Hero(props) {
                 width="36"
                 height="36"
                 src={IconTraveler}
-                alt={`${props.data.hero.travelers} travelers`}
+                alt={`${props.data.travelers} travelers`}
               />
               <h6 className="mt-3">
-                {formatNumber(props.data.hero.travelers)}{" "}
+                {formatNumber(props.data.travelers)}{" "}
                 <span className="text-gray-500 font-weight-light">
                   travelers
                 </span>
@@ -60,10 +60,10 @@ export default function Hero(props) {
                 width="36"
                 height="36"
                 src={IconTreasure}
-                alt={`${props.data.hero.treasures} treasures`}
+                alt={`${props.data.treasures} treasures`}
               />
               <h6 className="mt-3">
-                {formatNumber(props.data.hero.treasures)}{" "}
+                {formatNumber(props.data.treasures)}{" "}
                 <span className="text-gray-500 font-weight-light">
                   treasures
                 </span>
@@ -74,10 +74,10 @@ export default function Hero(props) {
                 width="36"
                 height="36"
                 src={IconCities}
-                alt={`${props.data.hero.cities} cities`}
+                alt={`${props.data.cities} cities`}
               />
               <h6 className="mt-3">
-                {formatNumber(props.data.hero.cities)}{" "}
+                {formatNumber(props.data.cities)}{" "}
                 <span className="text-gray-500 font-weight-light">cities</span>
               </h6>
             </div>

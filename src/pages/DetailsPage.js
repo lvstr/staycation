@@ -4,6 +4,7 @@ import PageDetailTitle from "parts/PageDetailTitle";
 import FeaturedImages from "parts/FeaturedImages";
 
 import ItemDetails from "json/itemDetails.json";
+import PageDetailDescription from "parts/PageDetailDescription";
 
 export default class DetailsPage extends Component {
   componentDidMount() {
@@ -25,6 +26,14 @@ export default class DetailsPage extends Component {
           data={ItemDetails}
         ></PageDetailTitle>
         <FeaturedImages data={ItemDetails.imageUrls}></FeaturedImages>
+        <section className="container">
+          <div className="row">
+            <div className="col-7 pr-5">
+              <PageDetailDescription data={ItemDetails}></PageDetailDescription>
+            </div>
+            <div className="col-5">Booking form</div>
+          </div>
+        </section>
       </>
     );
   }

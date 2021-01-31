@@ -7,13 +7,13 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="row">
-          <div className="col-auto" style={{ width: 350 }}>
+          <div className="col-auto" style={{ width: 340 }}>
             <IconText />
             <p className="brand-tagline">
               We kaboom your beauty holiday instantly and memorable.
             </p>
           </div>
-          <div className="col-2 mr-5">
+          <div className="col-3 mr-3">
             <h6 className="mt-2">For Beginners</h6>
             <ul className="list-group list-groups-flush">
               <li className="list-group-item">
@@ -55,7 +55,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-3">
+          <div className="col-2">
             <h6 className="mt-2">Connect Us</h6>
             <ul className="list-group list-groups-flush">
               <li className="list-group-item">
@@ -64,7 +64,7 @@ export default function Footer() {
                   type="link"
                   href="mail:support@staycation.id"
                 >
-                  support@staycation.idOur Careers
+                  support@staycation.id
                 </Button>
               </li>
               <li className="list-group-item">

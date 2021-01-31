@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "parts/Header";
 import PageDetailTitle from "parts/PageDetailTitle";
-import FeaturedImage from "parts/FeaturedImages";
+import FeaturedImages from "parts/FeaturedImages";
 
 import ItemDetails from "json/itemDetails.json";
 
@@ -24,7 +24,7 @@ export default class DetailsPage extends Component {
           breadcrumb={breadcrumb}
           data={ItemDetails}
         ></PageDetailTitle>
-        <FeaturedImage data={ItemDetails.imageUrls}></FeaturedImage>
+        <FeaturedImages data={ItemDetails.imageUrls}></FeaturedImages>
       </>
     );
   }

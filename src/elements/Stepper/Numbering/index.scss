@@ -22,7 +22,7 @@ ol.stepper {
     color: $white;
 
     &:after {
-      position: relative;
+      position: absolute;
       content: "";
       z-index: 2;
       width: $size;
@@ -33,7 +33,7 @@ ol.stepper {
       background-repeat: no-repeat;
       background-color: $teal;
       transform: scale(1);
-      transition: 0.35% transform ease-in-out;
+      transition: 0.35s transform ease-in-out;
     }
 
     &:not(:last-child) {
@@ -44,7 +44,7 @@ ol.stepper {
         top: 50%;
         left: 100%;
         position: absolute;
-        width: 60px;
+        width: $size + 10;
         height: 1px;
         background-color: $stepperMainColor;
       }

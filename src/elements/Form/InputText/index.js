@@ -19,7 +19,7 @@ export default function Text(props) {
   const [HasError, setHasError] = useState(null);
 
   let pattern = "";
-  if (type === "email") pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+S/;
+  if (type === "email") pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (type === "tel") pattern = "[0-9]*";
 
   const onChange = (event) => {
@@ -31,12 +31,13 @@ export default function Text(props) {
     };
     if (type === "email") {
       if (!pattern.test(event.target.value)) setHasError(errorResponse);
-      else setHasError("");
+      else setHasError(null);
     }
 
     if (type === "tel") {
       if (event.target.validity.valid) props.onChange(target);
-      else props.onChange(target);
+    } else {
+      props.onChange(target);
     }
   };
 
@@ -54,7 +55,7 @@ export default function Text(props) {
           pattern={pattern}
           className={["form-control", inputClassName].join(" ")}
           value={value}
-          placehoo={placeholder}
+          placeholder={placeholder}
           onChange={onChange}
         />
         {append && (
@@ -62,8 +63,8 @@ export default function Text(props) {
             <span className="input-group-text">{append}</span>
           </div>
         )}
-        {HasError && <span className="error-helper">{HasError}</span>}
       </div>
+      {HasError && <span className="error-helper">{HasError}</span>}
     </div>
   );
 }
@@ -80,7 +81,7 @@ Text.propTypes = {
   value: propTypes.oneOfType([propTypes.number, propTypes.string]).isRequired,
   onChange: propTypes.func.isRequired,
   prepend: propTypes.oneOfType([propTypes.number, propTypes.string]),
-  apppend: propTypes.oneOfType([propTypes.number, propTypes.string]),
+  append: propTypes.oneOfType([propTypes.number, propTypes.string]),
   type: propTypes.string,
   placeholder: propTypes.string,
   outerClassName: propTypes.string,

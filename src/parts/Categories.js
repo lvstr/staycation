@@ -5,6 +5,7 @@ import Fade from "react-reveal/Fade";
 
 export default function Categories({ data }) {
   return data.map((category, index1) => {
+    if (!category.itemId) return null;
     if (category.itemId.length === 0) return null;
     return (
       <section className="container" key={`category-${index1}`}>

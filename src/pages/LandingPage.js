@@ -32,7 +32,6 @@ class LandingPage extends Component {
     const { page } = this.props;
 
     if (!page.landingPage) return null;
-    console.log(page);
     return (
       <>
         <Header {...this.props}></Header>

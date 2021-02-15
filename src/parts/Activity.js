@@ -13,7 +13,7 @@ export default function Categories({ data }) {
             return (
               <div
                 className="item column-3 row-1"
-                key={`activity-item${index1}`}
+                key={`activity-item-${index1}`}
               >
                 <Fade bottom delay={300 * index1}>
                   <div className="card">

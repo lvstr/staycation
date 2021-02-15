@@ -59,14 +59,9 @@ class Checkout extends Component {
     payload.append("bookingEndDate", checkout.date.startDate);
     payload.append("idItem", checkout._id);
 
-    this.props
-      .submitBooking(payload)
-      .then(() => {
-        nextStep();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    this.props.submitBooking(payload).then(() => {
+      nextStep();
+    });
   };
 
   render() {
